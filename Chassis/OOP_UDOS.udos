@@ -1,0 +1,37 @@
+opcode GetAttr, i, S
+	SattrName xin
+	SchnName sprintfk "%s.%s", strget(p4), SattrName
+	//prints "Getting %s.%s\n", strget(p4), SattrName
+	iOut chnget SchnName
+	xout iOut
+endop
+
+opcode GetAttr, a, S
+	SattrName xin
+	SchnName sprintfk "%s.%s", strget(p4), SattrName
+	//prints "Getting %s.%s\n", strget(p4), SattrName
+	aOut chnget SchnName
+	xout aOut
+endop
+
+opcode GetAttr, k, S
+	SattrName xin
+	SchnName sprintfk "%s.%s", strget(p4), SattrName
+	//prints "Getting %s.%s\n", strget(p4), SattrName
+	kOut chnget SchnName
+	xout kOut
+endop
+
+opcode SetAttr, 0, Sa
+	SattrName, aValue xin
+	SchnName sprintfk "%s.%s", strget(p4), SattrName
+	//prints "Setting %s.%s\n", strget(p4), SattrName
+	chnset aValue, SchnName
+endop
+
+opcode SetAttr, 0, Sk
+	SattrName, kValue xin
+	SchnName sprintfk "%s.%s", strget(p4), SattrName
+	//prints "Setting %s.%s\n", strget(p4), SattrName
+	chnset kValue, SchnName
+endop
