@@ -1,3 +1,11 @@
+# exclude audio files and scores
+*.wav
+*.aiff
+*.pdf
+*.dorico
+*.musx
+
+
 # Prerequisites
 *.d
 
